@@ -44,7 +44,12 @@ To test the API, you can use the provided `todos.http` file and the REST Client 
 
 ## How to Use
 
-1. Clone this repository: `git clone https://github.com/your-username/your-repo.git`
+This project use Deno instead NODE!
+
+https://github.com/llllOllOOll/remix-restapi-crud.git
+npm install
+npm run dev
+
 2. The API will be accessible at `http://localhost:8000`.
 
 Feel free to explore the code and customize it according to your needs. Enjoy building your REMIX CRUD REST API with Deno!
