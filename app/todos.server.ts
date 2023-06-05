@@ -66,7 +66,6 @@ export async function createTodo(todo: TodoInput): Promise<Todo> {
 }
 
 export async function saveTodos(todos: Todo[]): Promise<void> {
-  console.log("Saving todos...", todos);
   try {
     await Deno.writeTextFile(
       "todos.json",
