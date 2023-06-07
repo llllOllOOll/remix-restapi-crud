@@ -97,38 +97,40 @@ const TodoComponent = () => {
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
           className="todo-input"
-          placeholder="Add Todo"
+          placeholder="Type your new task"
         />
 
         <button onClick={addTodo} className="add-todo-button">
           Add Todo
         </button>
-        <ul className="todo-list">
-          {todos.map((todo) => (
-            <li key={todo.id} className="todo-item">
-              <input
-                type="checkbox"
-                checked={todo.done}
-                onChange={() => toggleTodo(todo.id as string)}
-                className="todo-checkbox"
-              />
-              <span
-                style={{
-                  textDecoration: todo.done ? "line-through" : "none",
-                }}
-                className="todo-title"
-              >
-                {todo.title}
-              </span>
-              <button
-                onClick={() => deleteTodo(todo.id as string)}
-                className="delete-todo-button"
-              >
-                Delete
-              </button>
-            </li>
-          ))}
-        </ul>
+        <div className="todo-panel">
+          <ul className="todo-list">
+            {todos.map((todo) => (
+              <li key={todo.id} className="todo-item">
+                <input
+                  type="checkbox"
+                  checked={todo.done}
+                  onChange={() => toggleTodo(todo.id as string)}
+                  className="todo-checkbox"
+                />
+                <span
+                  style={{
+                    textDecoration: todo.done ? "line-through" : "none",
+                  }}
+                  className="todo-title"
+                >
+                  {todo.title}
+                </span>
+                <button
+                  onClick={() => deleteTodo(todo.id as string)}
+                  className="delete-todo-button"
+                >
+                  Delete
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

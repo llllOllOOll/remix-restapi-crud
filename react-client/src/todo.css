@@ -1,7 +1,11 @@
 .todo-container {
-  max-width: 400px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
 }
 
 .todo-input {
@@ -11,19 +15,42 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
+  background: #aa82db;
+  border: none;
+  color: white;
+}
+
+.todo-input::placeholder {
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
 }
 
 .add-todo-button {
-  background-color: #4caf50;
+  background-color: #9756e5;
   color: #fff;
   border: none;
   padding: 10px 15px;
   font-size: 16px;
-  border-radius: 4px;
+  font-weight: bold;
+  border-radius: 25px;
   cursor: pointer;
   margin-bottom: 10px;
+  width: 175px;
+  box-shadow: 0px 0px 2px 2px #af7eeb;
+  z-index: 1;
 }
 
+.todo-panel {
+  margin-top: -30px;
+  background: white;
+  padding: 40px 20px 15px 20px;
+  color: #9ba4c1;
+  font-weight: bold;
+
+  width: 100%;
+}
 .todo-list {
   list-style: none;
   padding: 0;
@@ -45,7 +72,7 @@
 }
 
 .delete-todo-button {
-  background-color: #f44336;
+  background-color: #6d0ca9;
   color: #fff;
   border: none;
   padding: 5px 10px;
